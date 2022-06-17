@@ -32,7 +32,8 @@ export default initializeAuthentication;
 * Step-4:
 1. Create Auth Context
 2. Create Context Provider 
-3. Use Auth Provider
-4. Create Use Auth Hook
+3. set context Provider context value.  
+4. Use Auth Provider
+5. Create Use Auth Hook
 
 */ 
