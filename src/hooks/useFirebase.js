@@ -6,30 +6,30 @@ import initializeAuthentication from "../Firebase/firebase.init";
 initializeAuthentication();
 
 
-const useFirebase =()=>{
+const useFirebase = () => {
     const [user, setUser] = useState({});
     const auth = getAuth();
-    const googleProvider = new GoogleAuthProvider(); 
-    const signInUsingGoogle =()=>{
-        signInWithPopup(auth, googleProvider).then(result=>{
+    const googleProvider = new GoogleAuthProvider();
+    const signInUsingGoogle = () => {
+        signInWithPopup(auth, googleProvider).then(result => {
             console.log(result.user)
         })
     }
 
-    const logOut = ()=>{
-        signOut(auth).then(()=>{
-        setUser({})
+    const logOut = () => {
+        signOut(auth).then(() => {
+            setUser({})
         })
     }
 
-    useEffect(()=> {
-     onAuthStateChanged(auth,(user)=>{
-        if (user) {
-            setUser(user);
-        }
-     })
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUser(user);
+            }
+        })
 
-    },[])
+    }, [])
 
     return {
         user,
