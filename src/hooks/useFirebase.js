@@ -5,13 +5,12 @@ import initializeAuthentication from "../Firebase/firebase.init";
 
 initializeAuthentication();
 
-
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
     const signInUsingGoogle = () => {
-        signInWithPopup(auth, googleProvider).then(result => {
+      return  signInWithPopup(auth, googleProvider).then(result => {
             console.log(result.user)
         })
     }
@@ -35,7 +34,6 @@ const useFirebase = () => {
         user,
         signInUsingGoogle,
         logOut
-
     }
 }
 

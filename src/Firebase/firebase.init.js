@@ -39,5 +39,7 @@ export default initializeAuthentication;
 * Step-5: Create Private Route
 1. Create Private Route.  
 2. Set Private Route. 
-
+--------------------------------------------------------
+* Step-6: Redirect After Login
+1. After Login Redirect User To Their Desired Destination.
 */ 
